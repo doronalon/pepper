@@ -39,7 +39,7 @@ describe('{Compare function}', () => {
 
     it('print developer1', () => {
         compare(oldObjects, newObjects)
-        // expect(infoMock).toBeCalledTimes(3)
+        expect(infoMock).toBeCalledTimes(3)
         expect(infoMock).nthCalledWith(1, '\nNew:\n [{\"id\":\"4\",\"name\":\"Jacob Brener\",\"job\":\"CEO\",\"age\":44,\"salary\":630}]')
         expect(infoMock).nthCalledWith(2, '\nRemoved:\n [{"id":"5","name":"Tal David","job":"Devops","age":20,"salary":100}]')
         expect(infoMock).nthCalledWith(3, '\nUpdated:\n [{\"id\":\"1\",\"name\":\"Tom Bird\",\"job\":\"Waiter\",\"age\":31,\"salary\":120},{\"id\":\"3\",\"name\":\"Moni Levi\",\"job\":\"Architect\",\"age\":44,\"salary\":210}]')
